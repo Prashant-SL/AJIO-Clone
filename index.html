@@ -490,7 +490,6 @@
 
   document.getElementById("ajioLogo").addEventListener("click", () => {
     window.location.href = "index.html";
-    console.log("hu");
   });
   // go to closest
   document.getElementById("hangerImg").addEventListener("click", () => {
@@ -575,7 +574,6 @@
     //   gotta write code for signup display
     document.getElementById("forSignup1").style.display = "block";
     let data = JSON.parse(localStorage.getItem("mobNum"));
-    console.log(data);
     document.getElementById("todisplayNum").innerHTML = data;
   });
   // for closing the details
@@ -613,7 +611,6 @@
       name: nameOFCx,
     };
     localStorage.setItem("randomN", JSON.stringify(obj));
-    console.log(randomToDis);
     document.getElementById("forSignup1").style.display = "none";
     document.getElementById("forSignup2").style.display = "block";
     alert(randomToDis);
@@ -624,8 +621,6 @@
     let otpVerification = JSON.parse(localStorage.getItem("randomN"));
 
     let customerOTP = document.getElementById("forOtp").value;
-    console.log(otpVerification.otp);
-    console.log(customerOTP);
     if (otpVerification.otp == customerOTP) {
       document.getElementById(
         "displayCxName"
@@ -687,19 +682,6 @@
   slider2Images[5] =
     "https://assets.ajio.com/medias/sys_master/images/images/h70/h1a/46801646419998/19012022-D-Unisex-banner1-p4-clarks-upto50.jpg";
 
-  // function sliderFunc2() {
-  //   document.slide2.src = slider2Images[j];
-  //   if (j < slider2Images.length - 1) {
-  //     j++;
-  //   } else {
-  //     j = 0;
-  //   }
-  //   setTimeout("sliderFunc2()", 3000);
-  // }
-  // var div2 = document.getElementById("slider2");
-  // div2.innerHTML = sliderFunc2();
-  // div2.innerHTML = "";
-
   // Slider 2 End
 
   // Slider 3 start
@@ -717,18 +699,6 @@
     "https://assets.ajio.com/medias/sys_master/images/images/h36/hbf/46714939605022/17012022-D-unisex-onlyonajio-trends-brands-footwear-upto70.jpg";
   slider3Images[5] =
     "https://assets.ajio.com/medias/sys_master/images/images/h66/h1c/46714939277342/17012022-D-unisex-onlyonajio-trends-brands-womenswear-startingat299.jpg";
-  // function sliderFunc3() {
-  //   document.slide3.src = slider3Images[k];
-  //   if (k < slider3Images.length - 1) {
-  //     k++;
-  //   } else {
-  //     k = 0;
-  //   }
-  //   setTimeout("sliderFunc3()", 3000);
-  // }
-  // var div3 = document.getElementById("slider3");
-  // div3.innerHTML = sliderFunc3();
-  // div3.innerHTML = "";
   // Slider 3 End
 
   // Slider 5 start
@@ -756,11 +726,7 @@
     setTimeout("sliderFunc5()", 3000);
   }
   var div5 = document.getElementById("slider4");
-  // div5.innerHTML = sliderFunc5();
-  // div5.innerHTML = "";
   // Slider 5 End
-
-  // /going toproduct page
 
   document.getElementById("section1").addEventListener("click", () => {
     window.location.href = "product.html";

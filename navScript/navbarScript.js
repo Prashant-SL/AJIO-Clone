@@ -1,6 +1,5 @@
 document.getElementById("ajioLogo").addEventListener("click", () => {
   window.location.href = "index.html";
-  console.log("hu");
 });
 // go to closest
 document.getElementById("hangerImg").addEventListener("click", () => {
@@ -85,7 +84,6 @@ document.getElementById("forSignUpbtn").addEventListener("click", () => {
   //   gotta write code for signup display
   document.getElementById("forSignup1").style.display = "block";
   let data = JSON.parse(localStorage.getItem("mobNum"));
-  console.log(data);
   document.getElementById("todisplayNum").innerHTML = data;
 });
 // for closing the details
@@ -122,7 +120,6 @@ document.getElementById("sendOtp").addEventListener("click", () => {
     name: nameOFCx,
   };
   localStorage.setItem("randomN", JSON.stringify(obj));
-  console.log(randomToDis);
   document.getElementById("forSignup1").style.display = "none";
   document.getElementById("forSignup2").style.display = "block";
   alert(randomToDis);
@@ -133,8 +130,6 @@ document.getElementById("confirmOTP").addEventListener("click", () => {
   let otpVerification = JSON.parse(localStorage.getItem("randomN"));
 
   let customerOTP = document.getElementById("forOtp").value;
-  console.log(otpVerification.otp);
-  console.log(customerOTP);
   if (otpVerification.otp == customerOTP) {
     document.getElementById(
       "displayCxName"
